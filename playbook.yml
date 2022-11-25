@@ -1,7 +1,8 @@
-hosts:all
-become:true
-tasks:
- -name:Installing VIM
-  apt: name=vim state=latest
- -name:Sending Hello World!
-  shell: echo Hello World!
+- hosts: all
+  become: true
+  tasks:
+    - name: Installing VIM
+      apt: name=vim state=latest
+
+    - name: Sending Hello World!
+      shell: echo Hello World!
